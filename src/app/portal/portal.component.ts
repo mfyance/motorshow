@@ -16,10 +16,10 @@ export class PortalComponent implements OnInit {
   constructor() {
 
     this.isBranchAdmin = false;
-    this.isExpositionAdmin = false;
+    this.isExpositionAdmin = true;
     this.isWebAdmin = false;
-    this.isExecutive= false;
-    this.isUsers=true;
+    this.isExecutive = false;
+    this.isUsers = false;
   }
 
   ngOnInit(): void {
