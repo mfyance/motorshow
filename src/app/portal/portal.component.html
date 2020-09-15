@@ -1,0 +1,60 @@
+<header>
+  <div class="header-logo">
+    <span class="logo-text">WEB ADMIN</span>
+  </div>
+</header>
+<nav>
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav mode="side" opened></mat-sidenav>
+    <mat-nav-list *ngIf="isWebAdmin">
+      <a mat-list-item [routerLink]="'/portal/web/exhibitors'" routerLinkActive="menu-active"><span class="menu-item">Expositores</span></a>
+      <a mat-list-item [routerLink]="'/portal/web/stands'" routerLinkActive="menu-active"><span class="menu-item">Stands</span></a>
+      <a mat-list-item [routerLink]="'/portal/web/clients'" routerLinkActive="menu-active"><span class="menu-item">Clientes</span></a>
+      <a mat-list-item [routerLink]="'/portal/web/reset-password'" routerLinkActive="menu-active"><span class="menu-item">Reiniciar Contraseña</span></a>
+    </mat-nav-list>
+
+    <mat-nav-list *ngIf="isExpositionAdmin">
+      <a mat-list-item [routerLink]="'/portal/exposition/dashboard'" routerLinkActive="menu-active"><span class="menu-item">Dashboard</span></a>
+      <a mat-list-item [routerLink]="'/portal/exposition/sponsors'" routerLinkActive="menu-active"><span class="menu-item">Sponsors</span></a>
+      <a mat-list-item [routerLink]="'/portal/exposition/auditorium-talk'" routerLinkActive="menu-active"><span class="menu-item">Auditorio o Charla</span></a>
+      <a mat-list-item [routerLink]="'/portal/exposition/stands'" routerLinkActive="menu-active"><span class="menu-item">Stands</span></a>
+      <a mat-list-item [routerLink]="'/portal/exposition/branch-admins'" routerLinkActive="menu-active"><span class="menu-item">Administradores de Marca</span></a>
+      <a mat-list-item [routerLink]="'/portal/exposition/reset-password'" routerLinkActive="menu-active"><span class="menu-item">Reiniciar Contraseña</span></a>
+      <a mat-list-item [routerLink]="'/portal/exposition/download-brochure'" routerLinkActive="menu-active"><span class="menu-item">Descargar Brochure</span></a>
+    </mat-nav-list>
+
+    <mat-nav-list *ngIf="isBranchAdmin">
+        <a mat-list-item [routerLink]="'/portal/branch/reset-password'" routerLinkActive="menu-active"><span class="menu-item">Reiniciar Contraseña</span></a>
+        <a mat-list-item [routerLink]="'/portal/branch/concessionaires'" routerLinkActive="menu-active"><span class="menu-item">Concesionarios/Agencias</span></a>
+        <a mat-list-item [routerLink]="'/portal/branch/upload-brochure'" routerLinkActive="menu-active"><span class="menu-item">Cargar brochure</span></a>
+        <a mat-list-item [routerLink]="'/portal/branch/upload-images'" routerLinkActive="menu-active"><span class="menu-item">Cargar Imagenes</span></a>
+        <a mat-list-item [routerLink]="'/portal/branch/download-brochure'" routerLinkActive="menu-active"><span class="menu-item">Reportes</span></a>
+      </mat-nav-list>
+      <mat-nav-list *ngIf="isExecutive">
+        <a mat-list-item [routerLink]="'/portal/executive/reset-password'" routerLinkActive="menu-active"><span class="menu-item">Reiniciar Contraseña</span></a>
+        <a mat-list-item [routerLink]="'/portal/executive/download-brochure'" routerLinkActive="menu-active"><span class="menu-item">Reportes</span></a>
+      
+      </mat-nav-list>
+      <mat-nav-list *ngIf="isUsers">
+      <a mat-list-item [routerLink]="'/portal/users/profile'" routerLinkActive="menu-active"><span class="menu-item">Perfil </span></a>
+      <a mat-list-item [routerLink]="'/portal/users/favorite-stands'" routerLinkActive="menu-active"><span class="menu-item">Stands Favoritos</span></a>
+      <a mat-list-item [routerLink]="'/portal/users/download-brochure'" routerLinkActive="menu-active"><span class="menu-item">Brochure descargados</span></a>
+      <a mat-list-item [routerLink]="'/portal/users/messages'" routerLinkActive="menu-active"><span class="menu-item">Mensajes  </span></a>
+      <a mat-list-item [routerLink]="'/portal/users/contac'" routerLinkActive="menu-active"><span class="menu-item">Contactos</span></a>
+      <a mat-list-item [routerLink]="'/portal/users/support'" routerLinkActive="menu-active"><span class="menu-item">Soporte Tecnico</span></a>
+      <a mat-list-item [routerLink]="'/portal/users/terms-conditions'" routerLinkActive="menu-active"><span class="menu-item">Terminos y Condiciones</span></a>
+      <a mat-list-item [routerLink]="'/portal/users/privacy'" routerLinkActive="menu-active"><span class="menu-item">Politica de Privacidad</span></a>
+  
+
+    </mat-nav-list>
+  </mat-sidenav-container>
+</nav>
+<section>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+</section>
+<footer>
+  <span>Todos los derechos reservados</span>
+</footer>
+  

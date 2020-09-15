@@ -1,0 +1,126 @@
+<main class="container-view">
+
+  <section class="container-body">
+    <h1>Validar Stands</h1>
+    <div class="row">
+      <div class="col-xs-12">
+        <button class="buttons" mat-raised-button color="primary" (click)="addStand()" [disabled]="isAddStand">
+          <mat-icon aria-hidden="false" aria-label="icon">add_circle</mat-icon>
+          Agregar Stand
+        </button>
+      </div>
+    </div>
+
+    <section id="addStandForm" *ngIf="isAddStand">
+
+      <div class="row">
+        <div class="col-md-12">
+          <mat-form-field appearance="legacy">
+            <mat-label>Imagen Principal
+            </mat-label>
+            <input matInput placeholder="">
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <mat-form-field appearance="legacy">
+            <mat-label>Imagen Secundaria</mat-label>
+            <input matInput placeholder="">
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <mat-form-field appearance="legacy">
+            <mat-label>Gif</mat-label>
+            <input matInput placeholder="">
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <mat-form-field appearance="legacy">
+            <mat-label>Video</mat-label>
+            <input matInput placeholder="">
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <mat-form-field appearance="legacy">
+            <mat-label>Logo</mat-label>
+            <input matInput placeholder="">
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-end button-container">
+        <button class="buttons" mat-raised-button color="primary" (click)="cancelAddStand()">Cancelar</button>
+        <button class="buttons" mat-raised-button color="primary" (click)="saveStand()">Guardar</button>
+      </div>
+
+    </section>
+    <section id="listStands">
+      <h1>Lista de Stands Registrados</h1>
+      <div class="table-container">
+        <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+          <!-- Position Column -->
+          <ng-container matColumnDef="id">
+            <mat-header-cell *matHeaderCellDef class="table-header"> N# </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.id}} </mat-cell>
+          </ng-container>
+
+          <!-- Name Column -->
+          <ng-container matColumnDef="imagen1">
+            <mat-header-cell *matHeaderCellDef class="table-header"> Imagen 1 </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.imagePrincipal}} </mat-cell>
+          </ng-container>
+
+          <!-- Weight Column -->
+          <ng-container matColumnDef="imagen2">
+            <mat-header-cell *matHeaderCellDef class="table-header"> Imagen 2 </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.imageSecondary}} </mat-cell>
+          </ng-container>
+
+          <!-- Symbol Column -->
+          <ng-container matColumnDef="gif">
+            <mat-header-cell *matHeaderCellDef class="table-header"> Gif </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.gif}} </mat-cell>
+          </ng-container>
+
+          <!-- Observation Column -->
+          <ng-container matColumnDef="video">
+            <mat-header-cell *matHeaderCellDef class="table-header"> Video </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.video}} </mat-cell>
+          </ng-container>
+
+          <!-- Logo Column-->
+          <ng-container matColumnDef="logo">
+            <mat-header-cell *matHeaderCellDef class="table-header"> Logo </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.logo}} </mat-cell>
+          </ng-container>
+
+          <!-- Actions Column-->
+          <ng-container matColumnDef="actions">
+            <mat-header-cell *matHeaderCellDef class="table-header"></mat-header-cell>
+            <mat-cell *matCellDef="let element">
+              <mat-icon aria-hidden="false" aria-label="icon" class="icon-click">done</mat-icon>
+              <mat-icon aria-hidden="false" aria-label="icon" class="icon-click">clear</mat-icon>
+              <mat-icon aria-hidden="false" aria-label="icon" class="icon-click">create</mat-icon>
+            </mat-cell>
+          </ng-container>
+
+          <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+        </mat-table>
+
+      </div>
+    </section>
+
+  </section>
+</main>

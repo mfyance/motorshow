@@ -1,0 +1,30 @@
+mat-form-field, div.row {
+  width: 100%;
+}
+
+.container-body {
+  width: 100%;
+}
+
+.brochure-title {
+  text-align: left;
+}
+
+.card-secondary {
+  margin: 8px 8px;
+}
+
+.card-content-center {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 240px;
+
+  & .counter {
+    text-align: center;
+    font-size: 44px;
+    font-weight: bolder;
+  }
+}

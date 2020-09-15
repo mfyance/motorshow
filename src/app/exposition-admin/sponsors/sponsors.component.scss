@@ -1,0 +1,29 @@
+mat-form-field, div.row {
+  width: 100%;
+}
+
+.container-body {
+  width: 100%;
+}
+.button-container{
+  margin-right:30px;
+}
+  
+.buttons{
+  border-radius: 15px;
+  margin: 2px;
+  
+}
+
+#listClients {
+  
+  margin-top: 32px;
+}
+
+.icon-click {
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+}

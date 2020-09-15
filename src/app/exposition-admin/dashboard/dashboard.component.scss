@@ -1,0 +1,35 @@
+mat-form-field, div.row {
+  width: 100%;
+}
+
+.container-body {
+  width: 100%;
+}
+
+.card-principal {
+  width: 100%;
+  margin-bottom: 24px;
+
+  & mat-card {
+    height: 100px;
+  }
+}
+
+.card-secondary {
+  width: 30%;
+}
+
+.card-content-center {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 240px;
+
+  & .counter {
+    text-align: center;
+    font-size: 44px;
+    font-weight: bolder;
+  }
+}

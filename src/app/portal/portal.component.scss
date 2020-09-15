@@ -1,0 +1,56 @@
+header, footer {
+
+  width: 100%;
+  position: fixed; 
+  padding: 10px 0;
+  height: 60px;
+}
+
+nav {
+
+  & .sidenav-container {
+  
+    z-index: 1;
+    position: absolute;
+    top: 60px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 20%;
+    background-color: var(--light);
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
+
+header {
+  z-index: 2;
+  top: 0;
+  background-color: var(--dark-primary);
+  display: flex;
+  align-items: center;
+  padding: 0 6%;
+}
+
+footer {
+  z-index: 0;
+  bottom: 0;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+section {
+
+  margin-left: 25%;
+  margin-right: 15%;
+  margin-top: 80px;
+  height: auto;
+  width: 70%;
+  margin-bottom: 40px;
+}
+
+.logo-text {
+  font-size: 32px;
+  font-weight: bolder;
+  color: var(--text-color);
+}
